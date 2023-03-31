@@ -33,6 +33,14 @@ namespace WIF_Claims
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
+
+            ScriptManager.ScriptResourceMapping.AddDefinition(
+                    "bootstrap",
+                    new ScriptResourceDefinition
+                    {
+                        Path = "~/Scripts/bootstrap.min.js",
+                        DebugPath = "~/Scripts/bootstrap.js"
+                    });
         }
     }
 }
